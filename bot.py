@@ -55,7 +55,7 @@ async def on_message(message):
     if '.pupconfused' in message_content or 'imconfusedpup' in message_content:
         await message.channel.send("https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif")
 
-    if '.soverykorean' in message_content or '.sov' in message_content:
+    if '.soverykorean' == message_content or '.sov' == message_content:
         await message.channel.send("https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g")
     
     if 'soveryboosted' in message_content or 'sovboosted' in message_content:
