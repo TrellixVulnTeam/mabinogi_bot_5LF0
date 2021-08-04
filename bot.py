@@ -9,14 +9,16 @@ load_dotenv()
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix='!', intents=intents)
 TOKEN = os.getenv('TOKEN')
+
+
 @client.event
 async def on_ready():
     print("Nerevarius' Assistant is ready to help.")
 
+
 @client.command()
 async def goodbye(ctx):
     await ctx.send("Bye")
-
 
 
 @client.event
@@ -42,9 +44,8 @@ async def on_message(message):
             else:
                 await message.channel.send(f"```{enchant}```")
 
-
-
-    commands = ['.enchants', 'i like this bot', '.puppet','.pupconfused','.sov','.pie', '.roro', '777', '.angelabb']
+    commands = ['.enchants', 'i like this bot', '.puppet',
+                '.pupconfused', '.sov', '.pie', '.roro', '777', '.angelabb']
     if ".commands" == message_content:
         await message.channel.send(f"``` {commands}```")
     if "i like this bot" == message_content or 'I like this bot' == message_content:
@@ -57,9 +58,9 @@ async def on_message(message):
 
     if '.soverykorean' == message_content or '.sov' == message_content:
         await message.channel.send("https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g")
-    
+
     if '.soveryboosted' in message_content or '.sovboosted' in message_content:
-        await message.channel.send("https://gph.is/g/aNnvKqo") 
+        await message.channel.send("https://gph.is/g/aNnvKqo")
 
     if '.pie' in message_content:
         await message.channel.send("https://media1.giphy.com/media/YMLWuqqiNdY9YkpKIq/giphy.gif" or "https://gfycat.com/ripescentedindochinesetiger")
@@ -70,4 +71,7 @@ async def on_message(message):
         await message.channel.send("https://media.tenor.com/images/01f2fce15461365c59981176ece3791d/tenor.gif")
     if '.angelabb' in message_content:
         await message.channel.send("https://media0.giphy.com/media/Qv5TjYPMeesh3ALM4N/giphy.gif")
+
+    if '.boots' == message_content or '.boot' == message_content:
+        await message.channel.send("https://gfycat.com/fluidbothkatydid")
 client.run(TOKEN)
