@@ -58,7 +58,7 @@ async def on_message(message):
     if '.soverykorean' == message_content or '.sov' == message_content:
         await message.channel.send("https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g")
     
-    if 'soveryboosted' in message_content or 'sovboosted' in message_content:
+    if '.soveryboosted' in message_content or '.sovboosted' in message_content:
         await message.channel.send("https://gph.is/g/aNnvKqo") 
 
     if '.pie' in message_content:
