@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 def spoon(url):
     enchant_info = ''
     response = requests.get(url)
@@ -14,10 +15,6 @@ def spoon(url):
     else:
         return False
 
-def keyword_strip(user_message):
-    user_message = user_message[9:]
-    return user_message
-
 
 def send_link(result_links, search_words):
     send_link = set()
@@ -27,6 +24,7 @@ def send_link(result_links, search_words):
         if search_words in text and ("rank" in text or "enchant" in text):
             send_link.add(link.get('href'))
     return send_link
+
 
 class EnchantSearcher:
     def __init__(self):
@@ -39,7 +37,7 @@ class EnchantSearcher:
             return False
 
     def base_case(self, base_key):
-        path_key = base_key[9:]
+        path_key = base_key
         path_key_split = path_key.split(" ")
         capitalized = [x.capitalize() for x in path_key_split]
         if len(path_key_split) == 3:
@@ -74,7 +72,6 @@ class EnchantSearcher:
             es2 = EnchantSearcher()
             return es2.searcherparttwo(whole_keyword)
 
-
     def searcherparttwo(self, keyword):
         url = self.base_url + keyword
         if spoon(url):
@@ -90,6 +87,3 @@ class EnchantSearcher:
         soup = BeautifulSoup(content, 'html.parser')
         result_links = soup.findAll('a')
         return send_link(result_links, keyword)
-
-
-
