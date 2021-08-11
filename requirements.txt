@@ -1,5 +1,4 @@
 git+https://github.com/Rapptz/discord.py
 python-dotenv
 requests
->>>>>>> dcfa04fcbcedef58a48ea18f083cf8e41225f2c8
 bs4
