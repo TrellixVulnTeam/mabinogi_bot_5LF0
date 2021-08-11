@@ -25,17 +25,17 @@ async def commands(ctx):
     embed = discord.Embed(title="Nerevarius Assistant Bot",
                           description="Commands:")
     embed.add_field(
-        name="-enchant Enchant Name", value="Search Mabi Wiki for Enchant")
-    embed.add_field(name="-reactrole emoji @rolename message",
+        name="_enchant Enchant Name", value="Search Mabi Wiki for Enchant")
+    embed.add_field(name="_reactrole emoji @rolename message",
                     value="Set Roles for Reactions")
-    embed.add_field(name="-puppetoo", value="Puppetoo")
-    embed.add_field(name="-puppetoo", value=" Confused Puppetoo")
-    embed.add_field(name="-sovery", value="Banana")
-    embed.add_field(name="-soveryboosted", value="Bigger Banana")
-    embed.add_field(name="-roro", value="WHO")
-    embed.add_field(name="-boots", value="My Nigga")
-    embed.add_field(name="-pie", value="Slap")
-    embed.add_field(name="-angelabb", value="Money")
+    embed.add_field(name="_puppetoo", value="Puppetoo")
+    embed.add_field(name="_puppetoo", value=" Confused Puppetoo")
+    embed.add_field(name="_sovery", value="Banana")
+    embed.add_field(name="_soveryboosted", value="Bigger Banana")
+    embed.add_field(name="_roro", value="WHO")
+    embed.add_field(name="_boots", value="My Nigga")
+    embed.add_field(name="_pie", value="Slap")
+    embed.add_field(name="_angelabb", value="Money")
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
