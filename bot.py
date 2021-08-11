@@ -157,7 +157,7 @@ async def boots(ctx):
 
 @client.command()
 async def pie(ctx):
-    await ctx.channel.send("https://media3.giphy.com/media/ZEkZXknM3STeDyk0u1/giphy.gif")
+    await ctx.channel.send("https://c.tenor.com/jo-G7N8cOZgAAAAM/cutie-guess-what.gif")
 
 
 @client.command()
