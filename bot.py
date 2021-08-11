@@ -28,7 +28,7 @@ async def commands(ctx):
     embed.add_field(name="_reactrole emoji @rolename message",
                     value="Set Roles for Reactions")
     embed.add_field(name="_puppetoo", value="Puppetoo")
-    embed.add_field(name="_puppetoo", value=" Confused Puppetoo")
+    embed.add_field(name="_puppethuh", value=" Confused Puppetoo")
     embed.add_field(name="_sovery", value="Banana")
     embed.add_field(name="_soveryboosted", value="Bigger Banana")
     embed.add_field(name="_roro", value="WHO")
