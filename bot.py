@@ -6,7 +6,6 @@ from discord.ext import commands
 import discord
 from bs4 import BeautifulSoup
 import os
-<< << << < HEAD
 enchant_search = enchants.EnchantSearcher()
 
 
