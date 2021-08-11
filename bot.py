@@ -1,17 +1,17 @@
-<<<<<<< HEAD
-import os
-from bs4 import BeautifulSoup
-import discord
-from discord.ext import commands
-from dotenv import load_dotenv
-import enchants
-import alarms
 import json
+import alarms
+import enchants
+from dotenv import load_dotenv
+from discord.ext import commands
+import discord
+from bs4 import BeautifulSoup
+import os
+<< << << < HEAD
 enchant_search = enchants.EnchantSearcher()
 
 
 load_dotenv()
-client = commands.Bot(command_prefix='-', intents=discord.Intents.all())
+client = commands.Bot(command_prefix='_', intents=discord.Intents.all())
 TOKEN = os.getenv('TOKEN')
 
 
@@ -167,12 +167,7 @@ async def angelabb(ctx):
 
 
 client.run(TOKEN)
-=======
-import os
-import discord
-from discord.ext import commands
-from dotenv import load_dotenv
-import enchants
+== == == =
 enchant_search = enchants.EnchantSearcher()
 
 load_dotenv()
@@ -245,4 +240,4 @@ async def on_message(message):
     if '.boots' == message_content or '.boot' == message_content:
         await message.channel.send("https://gfycat.com/fluidbothkatydid")
 client.run(TOKEN)
->>>>>>> dcfa04fcbcedef58a48ea18f083cf8e41225f2c8
+>>>>>> > dcfa04fcbcedef58a48ea18f083cf8e41225f2c8
