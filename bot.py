@@ -157,7 +157,7 @@ async def boots(ctx):
 
 @client.command()
 async def pie(ctx):
-    await ctx.channel.send("https://c.tenor.com/jo-G7N8cOZgAAAAM/cutie-guess-what.gif")
+    await ctx.channel.send("https://c.tenor.com/A39Xp0MakpwAAAAC/cutie-pie-kitten.gif")
 
 
 @client.command()
