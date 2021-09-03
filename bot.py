@@ -6,6 +6,7 @@ from discord.ext import commands
 import discord
 from bs4 import BeautifulSoup
 import os
+import random
 enchant_search = enchants.EnchantSearcher()
 
 
@@ -137,17 +138,20 @@ async def puppethuh(ctx):
 
 @client.command()
 async def sovery(ctx):
-    await ctx.channel.send("https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g")
+    sovery = ["https://tenor.com/XWLX.gif", "https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g", "https://tenor.com/oVKZ.gif"]
+    await ctx.channel.send(random.choice(sovery))
 
 
 @client.command()
 async def soveryboosted(ctx):
-    await ctx.channel.send("https://gph.is/g/aNnvKqo")
+    boosted = ["https://tenor.com/6JtP.gif", "https://gph.is/g/aNnvKqo"]
+    await ctx.channel.send(random.choice(boosted))
 
 
 @client.command()
 async def roro(ctx):
-    await ctx.channel.send("https://media1.tenor.com/images/8a5375e5beeeb497ac67c61ad648c990/tenor.gif?itemid=12911682")
+    roro = ["https://media1.tenor.com/images/8a5375e5beeeb497ac67c61ad648c990/tenor.gif?itemid=12911682","https://tenor.com/bbAHQ.gif"]
+    await ctx.channel.send(random.choice(roro))
 
 
 @client.command()
@@ -157,7 +161,8 @@ async def boots(ctx):
 
 @client.command()
 async def pie(ctx):
-    await ctx.channel.send("https://c.tenor.com/A39Xp0MakpwAAAAC/cutie-pie-kitten.gif")
+    pies = ["https://c.tenor.com/A39Xp0MakpwAAAAC/cutie-pie-kitten.gif", "https://tenor.com/zmHF.gif", "https://tenor.com/bdVoh.gif", "https://tenor.com/bleVO.gif", "https://tenor.com/649f.gif"]
+    await ctx.channel.send(random.choice(pies))
 
 
 @client.command()
