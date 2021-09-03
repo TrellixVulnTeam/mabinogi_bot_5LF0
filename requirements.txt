@@ -2,4 +2,4 @@ git+https://github.com/Rapptz/discord.py
 python-dotenv
 requests
 bs4
-random
+python-random
