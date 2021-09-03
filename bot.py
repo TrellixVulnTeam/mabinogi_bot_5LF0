@@ -28,7 +28,7 @@ async def commands(ctx):
         name="Search Enchant on Mabi Wiki", value="*enchant")
     embed.add_field(name="Creates a message to react for role",
                     value="*reactrole [emoji] [@rolename] message")
-    embed.add_field(name="Puppet, value="*puppet")
+    embed.add_field(name="Puppet", value="*puppet")
     embed.add_field(name="Puppet Confused", value=" *puppetconfused")
     embed.add_field(name="Sov", value="*sovery")
     embed.add_field(name="Sov Boosted", value="*soveryboosted")
