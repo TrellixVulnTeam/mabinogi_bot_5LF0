@@ -11,7 +11,7 @@ enchant_search = enchants.EnchantSearcher()
 
 
 load_dotenv()
-client = commands.Bot(command_prefix='_', intents=discord.Intents.all())
+client = commands.Bot(command_prefix='*', intents=discord.Intents.all())
 TOKEN = os.getenv('TOKEN')
 
 
@@ -25,17 +25,17 @@ async def commands(ctx):
     embed = discord.Embed(title="Nerevarius Assistant Bot",
                           description="Commands:")
     embed.add_field(
-        name="_enchant Enchant Name", value="Search Mabi Wiki for Enchant")
-    embed.add_field(name="_reactrole emoji @rolename message",
-                    value="Set Roles for Reactions")
-    embed.add_field(name="_puppetoo", value="Puppetoo")
-    embed.add_field(name="_puppethuh", value=" Confused Puppetoo")
-    embed.add_field(name="_sovery", value="Banana")
-    embed.add_field(name="_soveryboosted", value="Bigger Banana")
-    embed.add_field(name="_roro", value="WHO")
-    embed.add_field(name="_boots", value="My Nigga")
-    embed.add_field(name="_pie", value="Slap")
-    embed.add_field(name="_angelabb", value="Money")
+        name="Search Enchant on Mabi Wiki", value="*enchant")
+    embed.add_field(name="Creates a message to react for role",
+                    value="*reactrole [emoji] [@rolename] message")
+    embed.add_field(name="Puppet, value="*puppet")
+    embed.add_field(name="Puppet Confused", value=" *puppetconfused")
+    embed.add_field(name="Sov", value="*sovery")
+    embed.add_field(name="Sov Boosted", value="*soveryboosted")
+    embed.add_field(name="Roro", value="*roro")
+    embed.add_field(name="Boots", value="*boots")
+    embed.add_field(name="Pie", value="*pie")
+    embed.add_field(name="Angelabb", value="*angelabb")
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -128,11 +128,11 @@ async def reactrole(ctx, emoji, role: discord.Role, *, message):
 
 
 @client.command()
-async def puppetoo(ctx):
+async def puppet(ctx):
     await ctx.channel.send("Puppetoo is my Master, Lord, and Savior.")
 
 
-async def puppethuh(ctx):
+async def puppetconfused(ctx):
     await ctx.channel.send("https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif")
 
 
@@ -144,7 +144,7 @@ async def sovery(ctx):
 
 @client.command()
 async def soveryboosted(ctx):
-    boosted = ["https://tenor.com/6JtP.gif", "https://gph.is/g/aNnvKqo"]
+    boosted = ["https://tenor.com/6JtP.gif", "https://gph.is/g/aNnvKqo", "https://tenor.com/bnwng.gif"]
     await ctx.channel.send(random.choice(boosted))
 
 
@@ -167,7 +167,8 @@ async def pie(ctx):
 
 @client.command()
 async def angelabb(ctx):
-    await ctx.channel.send("https://c.tenor.com/nSAZJPpakoAAAAAC/p-diddy-money.gif")
+    rich = ["https://tenor.com/1h4u.gif","https://c.tenor.com/nSAZJPpakoAAAAAC/p-diddy-money.gif"]
+    await ctx.channel.send(random.choice(rich))
 
 
 client.run(TOKEN)
