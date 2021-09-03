@@ -29,7 +29,7 @@ async def commands(ctx):
     embed.add_field(name="Creates a message to react for role",
                     value="*reactrole [emoji] [@rolename] message")
     embed.add_field(name="Puppet", value="*puppet")
-    embed.add_field(name="Puppet Confused", value=" *puppetconfused")
+    embed.add_field(name="Puppet Confused", value=" *pupconfused")
     embed.add_field(name="Sov", value="*sovery")
     embed.add_field(name="Sov Boosted", value="*soveryboosted")
     embed.add_field(name="Roro", value="*roro")
@@ -132,7 +132,7 @@ async def puppet(ctx):
     await ctx.channel.send("Puppetoo is my Master, Lord, and Savior.")
 
 
-async def puppetconfused(ctx):
+async def pupconfused(ctx):
     await ctx.channel.send("https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif")
 
 
