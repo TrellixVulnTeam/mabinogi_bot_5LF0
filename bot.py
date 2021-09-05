@@ -36,6 +36,7 @@ async def commands(ctx):
     embed.add_field(name="Boots", value="*boots")
     embed.add_field(name="Pie", value="*pie")
     embed.add_field(name="Angelabb", value="*angelabb")
+    embed.add_field(name="Root", value="*root")
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -170,5 +171,9 @@ async def angelabb(ctx):
     rich = ["https://tenor.com/1h4u.gif","https://c.tenor.com/nSAZJPpakoAAAAAC/p-diddy-money.gif"]
     await ctx.channel.send(random.choice(rich))
 
+@client.command()
+async def root(ctx):
+    root = ["https://tenor.com/view/spongebob-squarepants-patrick-star-im-rooting-for-you-cheer-cheering-gif-5104276","https://c.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif"]
+    await ctx.channel.send(random.choice(root))
 
 client.run(TOKEN)
