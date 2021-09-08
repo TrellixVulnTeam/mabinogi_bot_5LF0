@@ -40,6 +40,7 @@ async def commands(ctx):
     embed.add_field(name="Dogens", value="*dogens")
     embed.add_field(name="Gamble", value="*gamble")
     embed.add_field(name="Tymiat", value="*tymi")
+    )
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
