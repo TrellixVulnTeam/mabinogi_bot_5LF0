@@ -24,8 +24,7 @@ async def on_ready():
 async def commands(ctx):
     embed = discord.Embed(title="Nerevarius Assistant Bot",
                           description="Commands:")
-    embed.add_field(
-        name="Search Enchant on Mabi Wiki", value="*enchant")
+    embed.add_field(name="Search Enchant on Mabi Wiki", value="*enchant")
     embed.add_field(name="Creates a message to react for role",
                     value="*reactrole [emoji] [@rolename] message")
     embed.add_field(name="Puppet", value="*puppet")
@@ -40,7 +39,6 @@ async def commands(ctx):
     embed.add_field(name="Dogens", value="*dogens")
     embed.add_field(name="Gamble", value="*gamble")
     embed.add_field(name="Tymiat", value="*tymi")
-    )
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
