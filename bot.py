@@ -137,7 +137,7 @@ async def puppet(ctx):
 @client.command()
 async def pupconfused(ctx):
     pupconfused = ["https://media2.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif","https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif"]
-    await ctx.channel.send(random.choice(confused))
+    await ctx.channel.send(random.choice(pupconfused))
 
 
 @client.command()
