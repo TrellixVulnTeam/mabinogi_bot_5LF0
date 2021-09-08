@@ -182,17 +182,8 @@ async def root(ctx):
 
 @client.command()
 async def dogens(ctx):
-    dogens = ["https://media.tenor.co/videos/818fd7b25dbc22d439cd286b2c3881bd/mp4"]
+    dogens = ["https://gfycat.com/cleverfeminineemeraldtreeskink"]
     await ctx.channel.send(random.choice(dogens))
- 
-@client.command()
-async def gamble(ctx):
-    gamble = ["https://media.tenor.co/videos/e50da5e9049e826e88d09d276b0cbb5f/mp4","https://media.tenor.co/videos/2110ab373068ae3fef6424f865fc29c2/mp4","https://media.tenor.co/videos/74dc58f452977d45d8c1c9c51e8a679e/mp4"]
-    await ctx.channel.send(random.choice(gamble))
-  
-@client.commands()
-async def tymi(ctx):
-    whatup = ["https://media0.giphy.com/media/101DNxoBTatF16/giphy.gif"]
-    await ctx.channel.send(random.choice(whatup))
+
     
 client.run(TOKEN)
