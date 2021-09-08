@@ -37,6 +37,9 @@ async def commands(ctx):
     embed.add_field(name="Pie", value="*pie")
     embed.add_field(name="Angelabb", value="*angelabb")
     embed.add_field(name="Root", value="*root")
+    embed.add_field(name="Dogens", value="*dogens")
+    embed.add_field(name="Gamble", value="*gamble")
+    embed.add_field(name="Tymiat", value="*tymi")
     await ctx.channel.send(content=None, embed=embed)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,9 +135,10 @@ async def reactrole(ctx, emoji, role: discord.Role, *, message):
 async def puppet(ctx):
     await ctx.channel.send("Puppetoo is my Master, Lord, and Savior.")
 
-
+@client.command()
 async def pupconfused(ctx):
-    await ctx.channel.send("https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif")
+    pupconfused = ["https://media2.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif","https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif"]
+    await ctx.channel.send(random.choice(confused))
 
 
 @client.command()
@@ -157,7 +161,8 @@ async def roro(ctx):
 
 @client.command()
 async def boots(ctx):
-    await ctx.channel.send("https://gfycat.com/fluidbothkatydid")
+    boots = ["https://gfycat.com/fluidbothkatydid"]
+    await ctx.channel.send(random.choice("https://gfycat.com/fluidbothkatydid"))
 
 
 @client.command()
@@ -176,4 +181,19 @@ async def root(ctx):
     root = ["https://tenor.com/view/spongebob-squarepants-patrick-star-im-rooting-for-you-cheer-cheering-gif-5104276","https://c.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif"]
     await ctx.channel.send(random.choice(root))
 
+@client.command()
+async def dogens(ctx):
+    dogens = ["https://media.tenor.co/videos/818fd7b25dbc22d439cd286b2c3881bd/mp4"]
+    await ctx.channel.send(random.choice(dogens))
+ 
+@client.command()
+async def gamble(ctx):
+    gamble = ["https://media.tenor.co/videos/e50da5e9049e826e88d09d276b0cbb5f/mp4","https://media.tenor.co/videos/2110ab373068ae3fef6424f865fc29c2/mp4","https://media.tenor.co/videos/74dc58f452977d45d8c1c9c51e8a679e/mp4"]
+    await ctx.channel.send(random.choice(gamble))
+  
+@client.commands()
+async def tymi(ctx):
+    whatup = ["https://media0.giphy.com/media/101DNxoBTatF16/giphy.gif"]
+    await ctx.channel.send(random.choice(whatup))
+    
 client.run(TOKEN)
