@@ -184,6 +184,16 @@ async def root(ctx):
 async def dogens(ctx):
     dogens = ["https://gfycat.com/cleverfeminineemeraldtreeskink"]
     await ctx.channel.send(random.choice(dogens))
+    
+@client.command()
+async def gamble(ctx):
+    gamble = ["https://tenor.com/view/lets-do-it-daniel-craig-heidi-gardner-saturday-night-live-lets-go-gif-16611656","https://tenor.com/view/bet-push-press-bets-betting-gif-17073187","https://tenor.com/view/bet-donewiththis-buttom-gif-14635640", "https://c.tenor.com/xIEnL_BZP6gAAAAM/bet-casino.gif"]
+    await ctx.channel.send(random.choice(gamble))
+    
+@client.command()
+async def tymi(ctx):
+    tymi = ["https://media0.giphy.com/media/101DNxoBTatF16/giphy.gif", "https://i.pinimg.com/originals/de/8b/0c/de8b0c92f3ea0101fea07e8759aa8980.gif","https://media0.giphy.com/media/1k0Y1V6iVwmSNScu65/giphy.gif"]
+    await ctx.channel.send(random.choice(tymi))
 
     
 client.run(TOKEN)
