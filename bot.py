@@ -161,7 +161,7 @@ async def roro(ctx):
 @client.command()
 async def boots(ctx):
     boots = ["https://gfycat.com/fluidbothkatydid"]
-    await ctx.channel.send(random.choice("https://gfycat.com/fluidbothkatydid"))
+    await ctx.channel.send(random.choice(boots))
 
 
 @client.command()
