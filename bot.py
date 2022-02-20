@@ -1,6 +1,6 @@
 import json
-import alarms
 import enchants
+import wikisearch
 from dotenv import load_dotenv
 from discord.ext import commands
 import discord
@@ -24,7 +24,9 @@ async def on_ready():
 async def commands(ctx):
     embed = discord.Embed(title="Nerevarius Assistant Bot",
                           description="Commands:")
-    embed.add_field(name="Search Enchant on Mabi Wiki", value="*enchant")
+    embed.add_field(name="Search Enchant on Mabi Wiki",
+                    value="*enchant [name]")
+    embed.add_field(name="Search Mabi Wiki", value="*search [item]")
     embed.add_field(name="Creates a message to react for role",
                     value="*reactrole [emoji] [@rolename] message")
     embed.add_field(name="Puppet", value="*puppet")
@@ -73,7 +75,12 @@ async def enchant(ctx, *message):
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Alarm
+# Search Mabinogi Wiki
+
+@client.command()
+async def search(ctx, *message):
+    search_key = message
+    wikisearch.Wikisearcher(search_key)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # React to Roles
@@ -134,27 +141,32 @@ async def reactrole(ctx, emoji, role: discord.Role, *, message):
 async def puppet(ctx):
     await ctx.channel.send("Puppetoo is my Master, Lord, and Savior.")
 
+
 @client.command()
 async def pupconfused(ctx):
-    pupconfused = ["https://media2.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif","https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif"]
+    pupconfused = ["https://media2.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif",
+                   "https://media.tenor.com/images/5840bd903ee40a5f6efff728837036d5/tenor.gif"]
     await ctx.channel.send(random.choice(pupconfused))
 
 
 @client.command()
 async def sovery(ctx):
-    sovery = ["https://tenor.com/XWLX.gif", "https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g", "https://tenor.com/oVKZ.gif"]
+    sovery = ["https://tenor.com/XWLX.gif",
+              "https://media2.giphy.com/media/1uPiL9Amv5zkk/giphy.gif?cid=82a1493bpmqpb1clmqtwxaim0ntt4rhf3i15va7z9de4u0rj&rid=giphy.gif&ct=g", "https://tenor.com/oVKZ.gif"]
     await ctx.channel.send(random.choice(sovery))
 
 
 @client.command()
 async def soveryboosted(ctx):
-    boosted = ["https://tenor.com/6JtP.gif", "https://gph.is/g/aNnvKqo", "https://tenor.com/bnwng.gif"]
+    boosted = ["https://tenor.com/6JtP.gif",
+               "https://gph.is/g/aNnvKqo", "https://tenor.com/bnwng.gif"]
     await ctx.channel.send(random.choice(boosted))
 
 
 @client.command()
 async def roro(ctx):
-    roro = ["https://media1.tenor.com/images/8a5375e5beeeb497ac67c61ad648c990/tenor.gif?itemid=12911682","https://tenor.com/bbAHQ.gif"]
+    roro = ["https://media1.tenor.com/images/8a5375e5beeeb497ac67c61ad648c990/tenor.gif?itemid=12911682",
+            "https://tenor.com/bbAHQ.gif"]
     await ctx.channel.send(random.choice(roro))
 
 
@@ -166,34 +178,43 @@ async def boots(ctx):
 
 @client.command()
 async def pie(ctx):
-    pies = ["https://c.tenor.com/A39Xp0MakpwAAAAC/cutie-pie-kitten.gif", "https://tenor.com/zmHF.gif", "https://tenor.com/bdVoh.gif", "https://tenor.com/bleVO.gif", "https://tenor.com/649f.gif"]
+    pies = ["https://c.tenor.com/A39Xp0MakpwAAAAC/cutie-pie-kitten.gif", "https://tenor.com/zmHF.gif",
+            "https://tenor.com/bdVoh.gif", "https://tenor.com/bleVO.gif", "https://tenor.com/649f.gif"]
     await ctx.channel.send(random.choice(pies))
 
 
 @client.command()
 async def angelabb(ctx):
-    rich = ["https://tenor.com/1h4u.gif","https://c.tenor.com/nSAZJPpakoAAAAAC/p-diddy-money.gif"]
+    rich = ["https://tenor.com/1h4u.gif",
+            "https://c.tenor.com/nSAZJPpakoAAAAAC/p-diddy-money.gif"]
     await ctx.channel.send(random.choice(rich))
+
 
 @client.command()
 async def root(ctx):
-    root = ["https://tenor.com/view/spongebob-squarepants-patrick-star-im-rooting-for-you-cheer-cheering-gif-5104276","https://c.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif"]
+    root = ["https://tenor.com/view/spongebob-squarepants-patrick-star-im-rooting-for-you-cheer-cheering-gif-5104276",
+            "https://c.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif"]
     await ctx.channel.send(random.choice(root))
+
 
 @client.command()
 async def dogens(ctx):
     dogens = ["https://gfycat.com/cleverfeminineemeraldtreeskink"]
     await ctx.channel.send(random.choice(dogens))
-    
+
+
 @client.command()
 async def gamble(ctx):
-    gamble = ["https://tenor.com/view/lets-do-it-daniel-craig-heidi-gardner-saturday-night-live-lets-go-gif-16611656","https://tenor.com/view/bet-push-press-bets-betting-gif-17073187","https://tenor.com/view/bet-donewiththis-buttom-gif-14635640", "https://c.tenor.com/xIEnL_BZP6gAAAAM/bet-casino.gif"]
+    gamble = ["https://tenor.com/view/lets-do-it-daniel-craig-heidi-gardner-saturday-night-live-lets-go-gif-16611656", "https://tenor.com/view/bet-push-press-bets-betting-gif-17073187",
+              "https://tenor.com/view/bet-donewiththis-buttom-gif-14635640", "https://c.tenor.com/xIEnL_BZP6gAAAAM/bet-casino.gif"]
     await ctx.channel.send(random.choice(gamble))
-    
+
+
 @client.command()
 async def tymi(ctx):
-    tymi = ["https://media0.giphy.com/media/101DNxoBTatF16/giphy.gif", "https://i.pinimg.com/originals/de/8b/0c/de8b0c92f3ea0101fea07e8759aa8980.gif","https://media0.giphy.com/media/1k0Y1V6iVwmSNScu65/giphy.gif"]
+    tymi = ["https://media0.giphy.com/media/101DNxoBTatF16/giphy.gif",
+            "https://i.pinimg.com/originals/de/8b/0c/de8b0c92f3ea0101fea07e8759aa8980.gif", "https://media0.giphy.com/media/1k0Y1V6iVwmSNScu65/giphy.gif"]
     await ctx.channel.send(random.choice(tymi))
 
-    
+
 client.run(TOKEN)
