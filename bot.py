@@ -1,13 +1,11 @@
 import json
-import enchants
-import wikisearch
+import enchants as enchants
 from dotenv import load_dotenv
 from discord.ext import commands
 import discord
 from bs4 import BeautifulSoup
 import os
 import random
-enchant_search = enchants.EnchantSearcher()
 
 
 load_dotenv()
@@ -49,7 +47,7 @@ async def commands(ctx):
 
 @client.command()
 async def enchant(ctx, *message):
-
+    enchant_search = enchants.EnchantSearcher
     enchant_key = ""
     enchant_key = " ".join(message)
     if enchant_search.base_case(enchant_key):
@@ -77,10 +75,7 @@ async def enchant(ctx, *message):
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Search Mabinogi Wiki
 
-@client.command()
-async def search(ctx, *message):
-    search_key = message
-    wikisearch.Wikisearcher(search_key)
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # React to Roles
